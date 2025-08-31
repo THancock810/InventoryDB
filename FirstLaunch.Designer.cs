@@ -58,7 +58,6 @@
             lblWelcome.TabIndex = 4;
             lblWelcome.Text = "Welcome to your Inventory!\r\n";
             lblWelcome.TextAlign = ContentAlignment.TopCenter;
-            lblWelcome.Click += label1_Click;
             // 
             // lblUser
             // 
@@ -77,7 +76,7 @@
             lblPass.Anchor = AnchorStyles.None;
             lblPass.AutoSize = true;
             lblPass.Font = new Font("Segoe UI", 12F);
-            lblPass.Location = new Point(478, 558);
+            lblPass.Location = new Point(483, 558);
             lblPass.Name = "lblPass";
             lblPass.RightToLeft = RightToLeft.No;
             lblPass.Size = new Size(76, 21);
@@ -117,7 +116,6 @@
             inputUser.RightToLeft = RightToLeft.No;
             inputUser.Size = new Size(291, 23);
             inputUser.TabIndex = 0;
-            inputUser.TextChanged += textBox1_TextChanged;
             // 
             // inputPass
             // 
@@ -164,7 +162,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1366, 963);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
             // 
             // FirstLaunch
             // 
@@ -174,7 +171,7 @@
             Controls.Add(panel1);
             Name = "FirstLaunch";
             Text = "Inventory";
-            Load += FirstLaunch_Load_1;
+            Load += FirstLaunch_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
