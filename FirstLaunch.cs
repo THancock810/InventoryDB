@@ -14,11 +14,6 @@ namespace InventoryDB
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FirstLaunch_Load(object sender, EventArgs e)
         {
 
@@ -40,6 +35,11 @@ namespace InventoryDB
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
         {
 
         }

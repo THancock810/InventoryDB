@@ -28,138 +28,137 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Label label1;
-            Label label2;
-            Label label3;
-            Label label4;
-            Label label5;
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            button1 = new Button();
-            textBox3 = new TextBox();
+            Label lblWelcome;
+            Label lblUser;
+            Label lblPass;
+            Label lblConfirmPass;
+            Label lblSignUp;
+            inputUser = new TextBox();
+            inputPass = new TextBox();
+            btnSignUp = new Button();
+            inputConfirmPass = new TextBox();
             panel1 = new Panel();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
+            lblWelcome = new Label();
+            lblUser = new Label();
+            lblPass = new Label();
+            lblConfirmPass = new Label();
+            lblSignUp = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // label1
+            // lblWelcome
             // 
-            label1.Anchor = AnchorStyles.None;
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 36F);
-            label1.Location = new Point(376, 134);
-            label1.Name = "label1";
-            label1.RightToLeft = RightToLeft.No;
-            label1.Size = new Size(615, 65);
-            label1.TabIndex = 4;
-            label1.Text = "Welcome to your Inventory!\r\n";
-            label1.TextAlign = ContentAlignment.TopCenter;
-            label1.Click += label1_Click;
+            lblWelcome.Anchor = AnchorStyles.None;
+            lblWelcome.AutoSize = true;
+            lblWelcome.Font = new Font("Segoe UI", 36F);
+            lblWelcome.Location = new Point(376, 259);
+            lblWelcome.Name = "lblWelcome";
+            lblWelcome.RightToLeft = RightToLeft.No;
+            lblWelcome.Size = new Size(615, 65);
+            lblWelcome.TabIndex = 4;
+            lblWelcome.Text = "Welcome to your Inventory!\r\n";
+            lblWelcome.TextAlign = ContentAlignment.TopCenter;
+            lblWelcome.Click += label1_Click;
             // 
-            // label2
+            // lblUser
             // 
-            label2.Anchor = AnchorStyles.None;
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(478, 383);
-            label2.Name = "label2";
-            label2.RightToLeft = RightToLeft.No;
-            label2.Size = new Size(81, 21);
-            label2.TabIndex = 5;
-            label2.Text = "Username";
-            label2.Click += label2_Click;
+            lblUser.Anchor = AnchorStyles.None;
+            lblUser.AutoSize = true;
+            lblUser.Font = new Font("Segoe UI", 12F);
+            lblUser.Location = new Point(478, 508);
+            lblUser.Name = "lblUser";
+            lblUser.RightToLeft = RightToLeft.No;
+            lblUser.Size = new Size(81, 21);
+            lblUser.TabIndex = 5;
+            lblUser.Text = "Username";
             // 
-            // label3
+            // lblPass
             // 
-            label3.Anchor = AnchorStyles.None;
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(478, 433);
-            label3.Name = "label3";
-            label3.RightToLeft = RightToLeft.No;
-            label3.Size = new Size(76, 21);
-            label3.TabIndex = 6;
-            label3.Text = "Password";
+            lblPass.Anchor = AnchorStyles.None;
+            lblPass.AutoSize = true;
+            lblPass.Font = new Font("Segoe UI", 12F);
+            lblPass.Location = new Point(478, 558);
+            lblPass.Name = "lblPass";
+            lblPass.RightToLeft = RightToLeft.No;
+            lblPass.Size = new Size(76, 21);
+            lblPass.TabIndex = 6;
+            lblPass.Text = "Password";
             // 
-            // label4
+            // lblConfirmPass
             // 
-            label4.Anchor = AnchorStyles.None;
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F);
-            label4.Location = new Point(451, 485);
-            label4.Name = "label4";
-            label4.RightToLeft = RightToLeft.No;
-            label4.Size = new Size(137, 21);
-            label4.TabIndex = 7;
-            label4.Text = "Confirm Password";
+            lblConfirmPass.Anchor = AnchorStyles.None;
+            lblConfirmPass.AutoSize = true;
+            lblConfirmPass.Font = new Font("Segoe UI", 12F);
+            lblConfirmPass.Location = new Point(451, 610);
+            lblConfirmPass.Name = "lblConfirmPass";
+            lblConfirmPass.RightToLeft = RightToLeft.No;
+            lblConfirmPass.Size = new Size(137, 21);
+            lblConfirmPass.TabIndex = 7;
+            lblConfirmPass.Text = "Confirm Password";
             // 
-            // label5
+            // lblSignUp
             // 
-            label5.Anchor = AnchorStyles.None;
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 24F);
-            label5.Location = new Point(400, 199);
-            label5.Name = "label5";
-            label5.RightToLeft = RightToLeft.No;
-            label5.Size = new Size(566, 45);
-            label5.TabIndex = 8;
-            label5.Text = "To get started, let's get you signed up!\r\n";
-            label5.TextAlign = ContentAlignment.TopCenter;
+            lblSignUp.Anchor = AnchorStyles.None;
+            lblSignUp.AutoSize = true;
+            lblSignUp.Font = new Font("Segoe UI", 24F);
+            lblSignUp.Location = new Point(400, 324);
+            lblSignUp.Name = "lblSignUp";
+            lblSignUp.RightToLeft = RightToLeft.No;
+            lblSignUp.Size = new Size(566, 45);
+            lblSignUp.TabIndex = 8;
+            lblSignUp.Text = "To get started, let's get you signed up!\r\n";
+            lblSignUp.TextAlign = ContentAlignment.TopCenter;
             // 
-            // textBox1
+            // inputUser
             // 
-            textBox1.Anchor = AnchorStyles.None;
-            textBox1.Location = new Point(624, 383);
-            textBox1.Name = "textBox1";
-            textBox1.RightToLeft = RightToLeft.No;
-            textBox1.Size = new Size(291, 23);
-            textBox1.TabIndex = 0;
-            textBox1.TextChanged += textBox1_TextChanged;
+            inputUser.Anchor = AnchorStyles.None;
+            inputUser.Location = new Point(624, 508);
+            inputUser.Name = "inputUser";
+            inputUser.RightToLeft = RightToLeft.No;
+            inputUser.Size = new Size(291, 23);
+            inputUser.TabIndex = 0;
+            inputUser.TextChanged += textBox1_TextChanged;
             // 
-            // textBox2
+            // inputPass
             // 
-            textBox2.Anchor = AnchorStyles.None;
-            textBox2.Location = new Point(624, 433);
-            textBox2.Name = "textBox2";
-            textBox2.RightToLeft = RightToLeft.No;
-            textBox2.Size = new Size(291, 23);
-            textBox2.TabIndex = 1;
+            inputPass.Anchor = AnchorStyles.None;
+            inputPass.Location = new Point(624, 558);
+            inputPass.Name = "inputPass";
+            inputPass.RightToLeft = RightToLeft.No;
+            inputPass.Size = new Size(291, 23);
+            inputPass.TabIndex = 1;
             // 
-            // button1
+            // btnSignUp
             // 
-            button1.Anchor = AnchorStyles.None;
-            button1.Location = new Point(700, 556);
-            button1.Name = "button1";
-            button1.Size = new Size(138, 23);
-            button1.TabIndex = 3;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnSignUp.Anchor = AnchorStyles.None;
+            btnSignUp.Location = new Point(700, 681);
+            btnSignUp.Name = "btnSignUp";
+            btnSignUp.Size = new Size(138, 23);
+            btnSignUp.TabIndex = 3;
+            btnSignUp.Text = "Sign Up";
+            btnSignUp.UseVisualStyleBackColor = true;
+            btnSignUp.Click += btnSignUp_Click;
             // 
-            // textBox3
+            // inputConfirmPass
             // 
-            textBox3.Anchor = AnchorStyles.None;
-            textBox3.Location = new Point(624, 485);
-            textBox3.Name = "textBox3";
-            textBox3.RightToLeft = RightToLeft.No;
-            textBox3.Size = new Size(291, 23);
-            textBox3.TabIndex = 2;
+            inputConfirmPass.Anchor = AnchorStyles.None;
+            inputConfirmPass.Location = new Point(624, 610);
+            inputConfirmPass.Name = "inputConfirmPass";
+            inputConfirmPass.RightToLeft = RightToLeft.No;
+            inputConfirmPass.Size = new Size(291, 23);
+            inputConfirmPass.TabIndex = 2;
             // 
             // panel1
             // 
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(lblUser);
+            panel1.Controls.Add(lblSignUp);
+            panel1.Controls.Add(inputPass);
+            panel1.Controls.Add(lblWelcome);
+            panel1.Controls.Add(inputConfirmPass);
+            panel1.Controls.Add(lblConfirmPass);
+            panel1.Controls.Add(btnSignUp);
+            panel1.Controls.Add(lblPass);
+            panel1.Controls.Add(inputUser);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -183,14 +182,14 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Button button1;
-        private TextBox textBox3;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
+        private TextBox inputUser;
+        private TextBox inputPass;
+        private Button btnSignUp;
+        private TextBox inputConfirmPass;
+        private Label lblWelcome;
+        private Label lblUser;
+        private Label lblPass;
+        private Label lblConfirmPass;
         private Panel panel1;
     }
 }
