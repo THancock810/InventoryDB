@@ -17,7 +17,9 @@ namespace InventoryDB
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-
+            Login loginScreen = new Login();
+            loginScreen.Show();
+            //this.Close();
         }
     }
 }
