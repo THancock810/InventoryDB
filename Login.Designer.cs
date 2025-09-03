@@ -28,33 +28,117 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            Label lblUser;
+            Label lblPass;
+            Label lblWelcome;
+            panel1 = new Panel();
+            inputPass = new TextBox();
+            btnSignUp = new Button();
+            inputUser = new TextBox();
+            lblUser = new Label();
+            lblPass = new Label();
+            lblWelcome = new Label();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // label1
+            // lblUser
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(342, 213);
-            label1.Name = "label1";
-            label1.Size = new Size(78, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Log In Below:";
-            label1.Click += label1_Click;
+            lblUser.Anchor = AnchorStyles.None;
+            lblUser.AutoSize = true;
+            lblUser.Font = new Font("Segoe UI", 12F);
+            lblUser.Location = new Point(274, 367);
+            lblUser.Name = "lblUser";
+            lblUser.RightToLeft = RightToLeft.No;
+            lblUser.Size = new Size(81, 21);
+            lblUser.TabIndex = 5;
+            lblUser.Text = "Username";
+            // 
+            // lblPass
+            // 
+            lblPass.Anchor = AnchorStyles.None;
+            lblPass.AutoSize = true;
+            lblPass.Font = new Font("Segoe UI", 12F);
+            lblPass.Location = new Point(279, 417);
+            lblPass.Name = "lblPass";
+            lblPass.RightToLeft = RightToLeft.No;
+            lblPass.Size = new Size(76, 21);
+            lblPass.TabIndex = 6;
+            lblPass.Text = "Password";
+            // 
+            // lblWelcome
+            // 
+            lblWelcome.Anchor = AnchorStyles.None;
+            lblWelcome.AutoSize = true;
+            lblWelcome.Font = new Font("Segoe UI", 36F);
+            lblWelcome.Location = new Point(219, 197);
+            lblWelcome.Name = "lblWelcome";
+            lblWelcome.RightToLeft = RightToLeft.No;
+            lblWelcome.Size = new Size(559, 65);
+            lblWelcome.TabIndex = 4;
+            lblWelcome.Text = "Sign in to your inventory:";
+            lblWelcome.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(lblUser);
+            panel1.Controls.Add(inputPass);
+            panel1.Controls.Add(lblWelcome);
+            panel1.Controls.Add(btnSignUp);
+            panel1.Controls.Add(lblPass);
+            panel1.Controls.Add(inputUser);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(984, 761);
+            panel1.TabIndex = 1;
+            // 
+            // inputPass
+            // 
+            inputPass.Anchor = AnchorStyles.None;
+            inputPass.Location = new Point(420, 417);
+            inputPass.Name = "inputPass";
+            inputPass.RightToLeft = RightToLeft.No;
+            inputPass.Size = new Size(291, 23);
+            inputPass.TabIndex = 1;
+            // 
+            // btnSignUp
+            // 
+            btnSignUp.Anchor = AnchorStyles.None;
+            btnSignUp.Location = new Point(423, 476);
+            btnSignUp.Name = "btnSignUp";
+            btnSignUp.Size = new Size(138, 23);
+            btnSignUp.TabIndex = 3;
+            btnSignUp.Text = "Sign In";
+            btnSignUp.UseVisualStyleBackColor = true;
+            btnSignUp.Click += btnSignIn_Click;
+            // 
+            // inputUser
+            // 
+            inputUser.Anchor = AnchorStyles.None;
+            inputUser.Location = new Point(420, 367);
+            inputUser.Name = "inputUser";
+            inputUser.RightToLeft = RightToLeft.No;
+            inputUser.Size = new Size(291, 23);
+            inputUser.TabIndex = 0;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(label1);
+            ClientSize = new Size(984, 761);
+            Controls.Add(panel1);
             Name = "Login";
             Text = "Login";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
+        private Panel panel1;
+        private TextBox inputPass;
+        private Button btnSignUp;
+        private TextBox inputUser;
     }
 }

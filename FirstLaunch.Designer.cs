@@ -51,7 +51,7 @@
             lblWelcome.Anchor = AnchorStyles.None;
             lblWelcome.AutoSize = true;
             lblWelcome.Font = new Font("Segoe UI", 36F);
-            lblWelcome.Location = new Point(376, 259);
+            lblWelcome.Location = new Point(185, 158);
             lblWelcome.Name = "lblWelcome";
             lblWelcome.RightToLeft = RightToLeft.No;
             lblWelcome.Size = new Size(615, 65);
@@ -64,7 +64,7 @@
             lblUser.Anchor = AnchorStyles.None;
             lblUser.AutoSize = true;
             lblUser.Font = new Font("Segoe UI", 12F);
-            lblUser.Location = new Point(478, 508);
+            lblUser.Location = new Point(287, 407);
             lblUser.Name = "lblUser";
             lblUser.RightToLeft = RightToLeft.No;
             lblUser.Size = new Size(81, 21);
@@ -76,7 +76,7 @@
             lblPass.Anchor = AnchorStyles.None;
             lblPass.AutoSize = true;
             lblPass.Font = new Font("Segoe UI", 12F);
-            lblPass.Location = new Point(483, 558);
+            lblPass.Location = new Point(292, 457);
             lblPass.Name = "lblPass";
             lblPass.RightToLeft = RightToLeft.No;
             lblPass.Size = new Size(76, 21);
@@ -88,7 +88,7 @@
             lblConfirmPass.Anchor = AnchorStyles.None;
             lblConfirmPass.AutoSize = true;
             lblConfirmPass.Font = new Font("Segoe UI", 12F);
-            lblConfirmPass.Location = new Point(451, 610);
+            lblConfirmPass.Location = new Point(260, 509);
             lblConfirmPass.Name = "lblConfirmPass";
             lblConfirmPass.RightToLeft = RightToLeft.No;
             lblConfirmPass.Size = new Size(137, 21);
@@ -100,7 +100,7 @@
             lblSignUp.Anchor = AnchorStyles.None;
             lblSignUp.AutoSize = true;
             lblSignUp.Font = new Font("Segoe UI", 24F);
-            lblSignUp.Location = new Point(400, 324);
+            lblSignUp.Location = new Point(209, 223);
             lblSignUp.Name = "lblSignUp";
             lblSignUp.RightToLeft = RightToLeft.No;
             lblSignUp.Size = new Size(566, 45);
@@ -111,7 +111,7 @@
             // inputUser
             // 
             inputUser.Anchor = AnchorStyles.None;
-            inputUser.Location = new Point(624, 508);
+            inputUser.Location = new Point(433, 407);
             inputUser.Name = "inputUser";
             inputUser.RightToLeft = RightToLeft.No;
             inputUser.Size = new Size(291, 23);
@@ -120,7 +120,7 @@
             // inputPass
             // 
             inputPass.Anchor = AnchorStyles.None;
-            inputPass.Location = new Point(624, 558);
+            inputPass.Location = new Point(433, 457);
             inputPass.Name = "inputPass";
             inputPass.RightToLeft = RightToLeft.No;
             inputPass.Size = new Size(291, 23);
@@ -129,7 +129,7 @@
             // btnSignUp
             // 
             btnSignUp.Anchor = AnchorStyles.None;
-            btnSignUp.Location = new Point(700, 681);
+            btnSignUp.Location = new Point(509, 580);
             btnSignUp.Name = "btnSignUp";
             btnSignUp.Size = new Size(138, 23);
             btnSignUp.TabIndex = 3;
@@ -140,7 +140,7 @@
             // inputConfirmPass
             // 
             inputConfirmPass.Anchor = AnchorStyles.None;
-            inputConfirmPass.Location = new Point(624, 610);
+            inputConfirmPass.Location = new Point(433, 509);
             inputConfirmPass.Name = "inputConfirmPass";
             inputConfirmPass.RightToLeft = RightToLeft.No;
             inputConfirmPass.Size = new Size(291, 23);
@@ -160,14 +160,14 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1366, 963);
+            panel1.Size = new Size(984, 761);
             panel1.TabIndex = 0;
             // 
             // FirstLaunch
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1366, 963);
+            ClientSize = new Size(984, 761);
             Controls.Add(panel1);
             Name = "FirstLaunch";
             Text = "Inventory";
