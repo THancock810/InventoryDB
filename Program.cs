@@ -1,9 +1,17 @@
-using System.IO;
+using Microsoft.Data.Sqlite;
 
 namespace InventoryDB
 {
     internal static class Program
     {
+
+        static bool checkForUser()
+        {
+
+            return true;
+        }
+
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -14,13 +22,41 @@ namespace InventoryDB
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            if (!File.Exists("inventory.db")) {
+
+            // Open DB connection, automatically creates DB if doesnt exist
+            var connectionFile = @"Data Source=inventory.db";
+            using var connection = new SqliteConnection(connectionFile);
+            connection.Open();
+
+            // create tables if they dont exist
+            using var userTable = new SqliteCommand("CREATE TABLE IF NOT EXISTS User " +
+                "(Username TEXT PRIMARY KEY NOT NULL UNIQUE, Password TEXT NOT NULL);", connection);
+            userTable.ExecuteNonQuery();
+
+            using var mainTable = new SqliteCommand("CREATE TABLE IF NOT EXISTS Inventory " +
+                "(ID INTEGER PRIMARY KEY, SerialNumber TEXT, Description TEXT, Image TEXT);", connection);
+            mainTable.ExecuteNonQuery();
+
+            // check if there is a user/pass present in the DB
+            using var countUsers = new SqliteCommand("SELECT COUNT(*) FROM User", connection);
+            long numUsers = (long)countUsers.ExecuteScalar(); // must be long because query returns 64bit number
+
+            //DEBUG:
+            //Console.WriteLine($"The number of rows in the User table is: {numUsers}");
+
+            if (numUsers < 1)
+            {
+                // no users, run FirstLaunch
                 Application.Run(new FirstLaunch());
             }
             else
             {
+                // there is a user, send to login as normal
                 Application.Run(new Login());
             }
+
         }
+
+
     }
 }

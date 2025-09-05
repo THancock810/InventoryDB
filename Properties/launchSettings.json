@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "InventoryDB": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\Tom\\source\\repos\\InventoryDB"
+    }
+  }
+}
