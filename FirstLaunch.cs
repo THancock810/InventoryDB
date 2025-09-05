@@ -1,4 +1,4 @@
-using System.Data.SQLite;
+
 
 namespace InventoryDB
 {
@@ -20,6 +20,11 @@ namespace InventoryDB
             Login loginScreen = new Login();
             loginScreen.Show();
             //this.Close();
+        }
+
+        private void lblWelcome_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

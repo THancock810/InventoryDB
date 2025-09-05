@@ -1,3 +1,5 @@
+using System.IO;
+
 namespace InventoryDB
 {
     internal static class Program
@@ -11,7 +13,14 @@ namespace InventoryDB
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Login());
+
+            if (!File.Exists("inventory.db")) {
+                Application.Run(new FirstLaunch());
+            }
+            else
+            {
+                Application.Run(new Login());
+            }
         }
     }
 }

@@ -58,6 +58,7 @@
             lblWelcome.TabIndex = 4;
             lblWelcome.Text = "Welcome to your Inventory!\r\n";
             lblWelcome.TextAlign = ContentAlignment.TopCenter;
+            lblWelcome.Click += lblWelcome_Click;
             // 
             // lblUser
             // 
