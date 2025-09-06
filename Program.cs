@@ -30,7 +30,7 @@ namespace InventoryDB
 
             // create tables if they dont exist
             using var userTable = new SqliteCommand("CREATE TABLE IF NOT EXISTS User " +
-                "(Username TEXT PRIMARY KEY NOT NULL UNIQUE, Password TEXT NOT NULL);", connection);
+                "(ID INTEGER PRIMARY KEY, Username TEXT NOT NULL UNIQUE, Password TEXT NOT NULL);", connection);
             userTable.ExecuteNonQuery();
 
             using var mainTable = new SqliteCommand("CREATE TABLE IF NOT EXISTS Inventory " +
@@ -44,6 +44,7 @@ namespace InventoryDB
             //DEBUG:
             //Console.WriteLine($"The number of rows in the User table is: {numUsers}");
 
+            connection.Close();
             if (numUsers < 1)
             {
                 // no users, run FirstLaunch
