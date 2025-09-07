@@ -1,5 +1,7 @@
 
 
+using InventoryDB.dbClasses;
+
 namespace InventoryDB
 {
     public partial class FirstLaunch : Form
@@ -19,19 +21,48 @@ namespace InventoryDB
         {
             // Check that both passwords are non-null and match
 
-            if (!(string.IsNullOrWhiteSpace(inputPass.Text) | string.IsNullOrWhiteSpace(inputConfirmPass.Text)) &
-                string.Equals(inputPass.Text, inputConfirmPass.Text))
+            if (string.IsNullOrWhiteSpace(inputUser.Text))
             {
-
+                //DEBUG:
+                Console.WriteLine("Username can't be null!");
+            }
+            else if (!string.Equals(inputPass.Text, inputConfirmPass.Text))
+            {
+                //DEBUG:
+                Console.WriteLine("Passwords must match!");
+            }
+            else if (string.IsNullOrWhiteSpace(inputPass.Text))
+            {
+                //DEBUG:
+                Console.WriteLine("Password can't be null!");
             }
             else
             {
-                //DEBUG:
-                Console.WriteLine("One password is null or they don't match!");
+                // Make a User class, assign the User/Pass from the buttons
+                userClass newUser = new userClass();
+                newUser.Username = inputUser.Text;
+
+                // TODO: Add salt and hash to password before assigning property
+                newUser.Password = inputPass.Text;
+
+                // Insert to DB
+                if (userClass.Insert(newUser))
+                {
+                    Console.WriteLine($"{newUser.Username}, {newUser.Password} successfully inserted!");
+
+                    // bring user to login screen if successful
+                    Login loginScreen = new Login();
+                    loginScreen.Show();
+                }
+                else
+                {
+                    Console.WriteLine("Didn't work!");
+                }
+
             }
 
-                Login loginScreen = new Login();
-            loginScreen.Show();
+
+
             //this.Close();
         }
     }

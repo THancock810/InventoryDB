@@ -1,3 +1,4 @@
+using InventoryDB.dbClasses;
 using Microsoft.Data.Sqlite;
 
 namespace InventoryDB
@@ -53,6 +54,7 @@ namespace InventoryDB
             else
             {
                 // there is a user, send to login as normal
+                userClass.Select();
                 Application.Run(new Login());
             }
 
