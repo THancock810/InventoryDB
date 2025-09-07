@@ -11,12 +11,6 @@ namespace InventoryDB
             InitializeComponent();
         }
 
-        private void FirstLaunch_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             // Check that both passwords are non-null and match
