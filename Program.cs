@@ -35,7 +35,7 @@ namespace InventoryDB
             userTable.ExecuteNonQuery();
 
             using var mainTable = new SqliteCommand("CREATE TABLE IF NOT EXISTS Inventory " +
-                "(ID INTEGER PRIMARY KEY, SerialNumber TEXT, Description TEXT, Image TEXT);", connection);
+                "(ID INTEGER PRIMARY KEY, Name TEXT, SerialNumber TEXT, Description TEXT, Image TEXT);", connection);
             mainTable.ExecuteNonQuery();
 
             // check if there is a user/pass present in the DB
