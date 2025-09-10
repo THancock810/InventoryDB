@@ -18,12 +18,51 @@ namespace InventoryDB.dbClasses
 
         public static string connectionFile = @"Data Source=inventory.db";
 
+        public inventoryClass(int id, string? name, string? serialNum, string? desc, string? image)
+        {
+            ID = id;
+            Name = name;
+            SerialNumber = serialNum;
+            Description = desc;
+            Image = image;
+        }
+
         public inventoryClass(string? name, string? serialNum, string? desc, string? image)
         {
             Name = name;
             SerialNumber = serialNum;
             Description = desc;
             Image = image;
+        }
+
+
+        private SqliteCommand AddParams(inventoryClass item, SqliteCommand cmd)
+        {
+            if (item.Name != null)
+            {
+                cmd.Parameters.AddWithValue("@Name", item.Name);
+            }
+            else { cmd.Parameters.AddWithValue("@Name", DBNull.Value); }
+
+            if (item.SerialNumber != null)
+            {
+                cmd.Parameters.AddWithValue("@SerialNumber", item.SerialNumber);
+            }
+            else { cmd.Parameters.AddWithValue("@SerialNumber", DBNull.Value); }
+
+            if (item.Description != null)
+            {
+                cmd.Parameters.AddWithValue("@Description", item.Description);
+            }
+            else { cmd.Parameters.AddWithValue("@Description", DBNull.Value); }
+
+            if (item.Image != null)
+            {
+                cmd.Parameters.AddWithValue("@Image", item.Image);
+            }
+            else { cmd.Parameters.AddWithValue("@Image", DBNull.Value); }
+
+            return cmd;
         }
 
         public static DataTable Select()
@@ -73,29 +112,7 @@ namespace InventoryDB.dbClasses
             using var insertCmd = new SqliteCommand("INSERT INTO Inventory (Name, SerialNumber, Description, Image) " +
                 "VALUES (@Name, @SerialNumber, @Description, @Image)", connection);
 
-            if (item.Name != null)
-            {
-                insertCmd.Parameters.AddWithValue("@Name", item.Name);
-            }
-            else {insertCmd.Parameters.AddWithValue("@Name", DBNull.Value);}
-
-            if (item.SerialNumber != null)
-            {
-                insertCmd.Parameters.AddWithValue("@SerialNumber", item.SerialNumber);
-            }
-            else {insertCmd.Parameters.AddWithValue("@SerialNumber", DBNull.Value);}
-
-            if (item.Description != null)
-            {
-                insertCmd.Parameters.AddWithValue("@Description", item.Description);
-            }
-            else {insertCmd.Parameters.AddWithValue("@Description", DBNull.Value);}
-
-            if (item.Image != null)
-            {
-                insertCmd.Parameters.AddWithValue("@Image", item.Image);
-            }
-            else {insertCmd.Parameters.AddWithValue("@Image", DBNull.Value);}
+            item.AddParams(item, insertCmd);
 
             int rowsAdded = insertCmd.ExecuteNonQuery(); // will return 1 (number of rows inserted) if successful
 
@@ -106,6 +123,8 @@ namespace InventoryDB.dbClasses
             connection.Close();
             return isInserted;
         }
+
+
 
     }
 }
